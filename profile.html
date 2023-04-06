@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background: url("https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80");
+        background-size: cover;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        font-family: "Plus Jakarta Sans";
+      }
+
+      .container-box {
+        overflow: hidden;
+      }
+      input {
+        outline: none;
+      }
+      .checkbox {
+        transform: scale(1.5);
+        accent-color: black;
+      }
+    </style>
+  </head>
+  <body class="flex justify-center items-center h-screen">
+    <div
+      class="container-box grid grid-rows-6 lg:grid-rows-none bg-black lg:grid-cols-3 w-full h-full lg:w-[98vw] lg:h-[96vh] lg:rounded-[4vh]"
+    >
+      <div
+        class="font-extrabold h-[96vh] text-white opacity-30 flex justify-center items-center"
+      >
+        <div class="profile text-4xl lg:text-8xl xl:text-9xl">Profile</div>
+      </div>
+      <div
+        class="grid grid-rows-5 row-span-5 text-center m-[3%] lg:m-[7%] lg:col-span-2 form"
+      >
+        <div
+          class="row-span-4 grid grid-rows-4 py-2 gap-4 bg-black rounded-[3vh]"
+        >
+          <div
+            class="max-w-full h-full mx-2 text-white text-left flex flex-col"
+          >
+            <div class="pl-2 text-2xl font-semibold">Username</div>
+            <input
+              type="text"
+              class="p-4 rounded-[2vh] bg-neutral-800 text-xl placeholder-white flex-1"
+              placeholder="Ojas Mutreja"
+            />
+          </div>
+          <div
+            class="max-w-full h-full mx-2 text-white text-left flex flex-col"
+          >
+            <div class="pl-2 text-2xl font-semibold">E Mail</div>
+            <input
+              type="email"
+              class="pl-4 rounded-[2vh] bg-neutral-800 text-xl placeholder-white flex-1"
+              placeholder="helloojasmutreja@gmail.com"
+            />
+          </div>
+          <div
+            class="max-w-full h-full mx-2 text-white text-left flex flex-col"
+          >
+            <div class="pl-2 text-2xl font-semibold">Password</div>
+            <input
+              type="password"
+              class="pl-4 rounded-[2vh] bg-neutral-800 text-xl placeholder-white flex-1"
+              placeholder="•••••••"
+            />
+          </div>
+          <!-- <div
+            class="mx-2 pl-4 rounded-[2vh] flex bg-blue-600 font-semibold text-2xl items-center text-white"
+          >Save Changes</div> -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

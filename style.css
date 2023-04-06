@@ -1,0 +1,100 @@
+/* Set the background image with a placeholder */
+body {
+  background: url('https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80');
+  background-size: cover;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-family: 'Plus Jakarta Sans';
+}
+
+.container-box {
+  background-color: black;
+  overflow:hidden;
+}
+
+.column-box {
+  
+  background-image: url('https://images.unsplash.com/photo-1656536665219-da2b7deb314b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80');
+  background-size: cover;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: relative;
+  max-height: 94.5vh;
+  margin: 6px;
+}
+
+.column-box .column-text{
+  position: relative;
+}
+.column-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+.options{
+  max-height: 65.33vh;
+}
+
+.option{
+  margin-top: 6px;
+}
+@media (min-width:1024px) {
+  
+.delete {
+  display: none;
+}
+.option:hover .delete {
+  display: block;
+}
+}
+
+.buttons{
+  border-radius: 3vh;
+}
+
+.arrow{
+  text-align: end;
+  padding-top: 6%;
+  padding-right: 6%;
+}
+
+.navbar {
+  border-radius: 3vh;
+  border-width: 2px;
+  border-color: white;
+  margin-left: 6px;
+  margin-right: 6px;
+  margin-top: 6px;
+}
+.another-decision, .daily-decisions{
+  border-radius: 3vh;
+  margin: 0;
+  margin-left: 6px;
+  margin-right: 6px;
+  margin-top: 6px;
+}
+
+.navbar-links p{
+  padding-left: 20px;
+}
+
+.logo{
+  height: 35px;
+  width: 35px;
+  margin-right: 10px;
+  border-radius: 3vh;
+}
+.buttons-navbar{
+  margin: 6px;
+  margin-top: 0%;
+}
+
+.new-decision, .profile, .save-decision{
+  border-radius: 1.5vh;
+  margin: 6px;
+}

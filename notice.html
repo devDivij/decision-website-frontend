@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .notification {
+        position: absolute;
+        z-index: 10;
+        margin: 6px;
+      }
+    </style>
+  </head>
+  <body class="flex justify-center items-center h-screen">
+    <div
+      class="container-box w-full h-full lg:w-[98vw] lg:h-[96vh] grid grid-cols-1 grid-rows-5 lg:grid-rows-3 lg:grid-cols-3 lg:rounded-[4vh]"
+    >
+      <div
+        class="grid grid-rows-6 lg:grid-rows-none text-7xl lg:text-6xl font-black text-white column-box rounded-[2vh] lg:rounded-[3vh] row-span-2 lg:row-span-3"
+      >
+        <div
+          class="column-text flex lg:row-span-full leading-snug row-span-5 lg:text-left text-center px-[10%] items-center"
+        >
+          What should I eat, drink and do today?
+        </div>
+        <div class="lg:hidden flex items-end justify-between buttons-column-1">
+          <div
+            class="save-decision flex items-center justify-center bg-neutral-800"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              class="w-10 h-10"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z"
+              />
+            </svg>
+          </div>
+          <div class="flex">
+            <div class="menu flex items-center justify-center bg-neutral-800">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                class="w-11 h-11"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 9h16.5m-16.5 6.75h16.5"
+                />
+              </svg>
+            </div>
+            <div
+              class="new-decision flex items-center justify-center bg-neutral-800"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="white"
+                class="w-14 h-14"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 6v12m6-6H6"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="grid grid-rows-4 row-span-2 lg:row-span-2 mx-[6px] lg:mx-0 options"
+      >
+        <div
+          class="option lg:pb-[3.5%] rounded-[2vh] lg:rounded-[3vh] flex items-center lg:items-end bg-neutral-800 font-semibold text-4xl lg:text-2xl text-white"
+        >
+          Salad
+        </div>
+        <div
+          class="option lg:pb-[3.5%] rounded-[2vh] lg:rounded-[3vh] flex items-center lg:items-end bg-neutral-800 font-semibold text-4xl lg:text-2xl text-white"
+        >
+          Sandwich
+        </div>
+        <div
+          class="option lg:pb-[3.5%] rounded-[2vh] lg:rounded-[3vh] flex items-center lg:items-end bg-neutral-800 font-semibold text-4xl lg:text-2xl text-white"
+        >
+          Roti Sabzi
+        </div>
+        <div
+          class="option lg:pb-[3.5%] rounded-[2vh] lg:rounded-[3vh] flex items-center lg:items-end bg-neutral-800 font-semibold text-4xl lg:text-2xl text-white"
+        >
+          Pasta
+        </div>
+        <!-- <div
+          class="option lg:pb-[3.5%] rounded-[2vh] lg:rounded-[3vh] flex items-center lg:items-end bg-neutral-800 font-semibold text-4xl lg:text-2xl text-white border-4"
+        >
+          <form action="">
+            <input type="text" class="option pl-0 flex items-center lg:items-end bg-neutral-800 font-semibold text-4xl lg:text-2xl text-white outline-none" placeholder="Add Option">
+          </form>
+        </div> -->
+      </div>
+      <div class="hidden lg:grid grid-row-4">
+        <div
+          class="hidden lg:flex flex-row items-center justify-between row-span-1 bg-white font-bold text-center text-xl navbar"
+        >
+          <div class="flex navbar-links py-0 basis-3/4">
+            <p>Home</p>
+            <p>About</p>
+            <p>Contact</p>
+          </div>
+          <div
+            class="flex items-center justify-center logo text-white bg-black"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="currentColor"
+              class="bi bi-twitter"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          class="hidden lg:grid grid-cols-2 lg:pb-[3.5%] lg:pl-[4.5%] row-span-3 items-end bg-blue-600 text-2xl font-extrabold text-white daily-decisions buttons"
+        >
+          <div class="">
+            Save this
+            <p>as a daily decision</p>
+          </div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="4"
+            stroke="currentColor"
+            class="self-start place-self-end arrow w-10 h-10"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        class="hidden lg:grid grid-cols-2 row-span-1 lg:pb-[3.5%] lg:pl-[4.5%] items-end bg-blue-600 text-2xl font-extrabold text-white another-decision buttons"
+      >
+        <div class="">
+          Take
+          <p>another decision</p>
+        </div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="4"
+          stroke="currentColor"
+          class="self-start place-self-end arrow w-10 h-10"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
+          />
+        </svg>
+      </div>
+
+      <div
+        class="p-0 lg:pb-[3.5%] lg:pl-[4.5%] lg:grid lg:grid-cols-2 flex items-center rounded-[2vh] lg:rounded-[3vh] m-[6px] lg:ml-0 justify-center lg:items-end bg-indigo-800 row-span-1 lg:col-span-2 text-6xl lg:text-5xl font-extrabold text-white buttons"
+      >
+        <div class="flex justify-center">Choose an option</div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="4"
+          stroke="currentColor"
+          class="hidden lg:block self-start place-self-end arrow w-14 h-14"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
+          />
+        </svg>
+      </div>
+      <!-- Notification -->
+      <div
+        class="max-w-[90vw] lg:max-w-lg lg:w-[32vw] overflow-hidden rounded-[2vh] lg:rounded-[3vh] bg-black text-white shadow-md shadow-yellow-500/20 border-2 border-yellow-500 notification justify-self-end lg:place-self-end place-self-start"
+      >
+        <div class="flex">
+          <div class="flex items-center gap-4 p-2">
+            <div
+              class="shrink-0 bg-neutral-800 text-amber-500 h-full p-4 rounded-[2vh] flex items-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-9 h-9"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"
+                />
+              </svg>
+            </div>
+            <div class="space-y-4 lg:space-y-2 p-6 lg:p-3">
+              <p class="font-bold capitalize text-6xl lg:text-2xl text-amber-400">
+                Warning Title goes Here
+              </p>
+              <p class="text-4xl lg:text-base"></p>
+            </div>
+          </div>
+          <div class="flex cursor-pointer justify-self-end items-start p-6">
+            <button class="">
+              <svg viewBox="0 0 24 24" class="w-14 h-14 lg:w-8 lg:h-8">
+                <path
+                  fill="currentColor"
+                  d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- <div
+        class="max-w-[90vw] lg:max-w-lg lg:w-[32vw] overflow-hidden rounded-[2vh] lg:rounded-[3vh] bg-black text-white shadow-md shadow-red-500/20 border-2 border-red-800 notification justify-self-end lg:place-self-end place-self-start"
+      >
+        <div class="flex">
+          <div class="flex items-center gap-4 p-2">
+            <div
+              class="shrink-0 bg-neutral-800 text-red-500 h-full p-4 rounded-[2vh] flex items-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-20 h-20 lg:w-11 lg:h-11"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"
+                />
+              </svg>
+            </div>
+            <div class="space-y-4 lg:space-y-2 p-6 lg:p-3">
+              <p class="font-bold capitalize text-6xl lg:text-2xl text-red-400">
+                Error Title goes Here
+              </p>
+              <p class="text-4xl lg:text-base">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Praesent et pharetra dui
+              </p>
+            </div>
+          </div>
+          <div class="flex cursor-pointer justify-self-end items-start p-6">
+            <button class="">
+              <svg viewBox="0 0 24 24" class="w-14 h-14 lg:w-8 lg:h-8">
+                <path
+                  fill="currentColor"
+                  d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div> -->
+      <!-- <div class="max-w-lg overflow-hidden rounded-[3vh] bg-black text-white shadow-md shadow-green-500/20 border-2 border-teal-800 notification justify-self-end place-self-end">
+        <div class="flex">
+          <div class="flex items-center gap-4 p-2">
+            <div class="shrink-0 bg-neutral-800 text-emerald-500 h-full p-4 rounded-[2vh] flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-9 h-9">
+                <path fill-rule="evenodd" d="M12.963 2.286a.75.75 0 00-1.071-.136 9.742 9.742 0 00-3.539 6.177A7.547 7.547 0 016.648 6.61a.75.75 0 00-1.152-.082A9 9 0 1015.68 4.534a7.46 7.46 0 01-2.717-2.248zM15.75 14.25a3.75 3.75 0 11-7.313-1.172c.628.465 1.35.81 2.133 1a5.99 5.99 0 011.925-3.545 3.75 3.75 0 013.255 3.717z" clip-rule="evenodd" />
+              </svg>                            
+            </div>
+            <div class="space-y-1 p-2">
+              <p class="font-bold capitalize text-2xl text-emerald-400 ">
+                Success Title goes Here
+              </p>
+              <p class="text-base">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et pharetra dui
+              </p>
+            </div>
+          </div>
+          <div class="flex cursor-pointer items-start p-4">
+            <button class="">
+              <svg width="27" height="27" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12z"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </body>
+</html>

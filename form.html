@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background: black;
+        background-size: cover;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        font-family: "Plus Jakarta Sans";
+      }
+
+      .container-box {
+        background-color: white;
+        overflow: hidden;
+      }
+      input {
+        outline: none;
+      }
+      .checkbox{
+        transform: scale(1.5);
+        accent-color: black;
+      }
+    </style>
+  </head>
+  <body class="flex justify-center items-center h-screen">
+    <div
+      class="container-box grid grid-rows-6 lg:grid-rows-none lg:grid-cols-2 w-full h-full lg:w-[98vw] lg:h-[96vh] lg:rounded-[4vh]"
+    >
+      <div class="font-extrabold flex lg:flex-col gap-10 justify-center items-center">
+        <div class="log-in lg:pt-[17.5vh] text-[2.25rem] lg:text-[7rem] p-2 lg:p-0 text-neutral-500">Log in</div>
+        <div class="sign-up text-4xl lg:text-9xl">Sign Up</div>
+      </div>
+      <div class="grid grid-rows-5 row-span-5 text-center m-[3%] lg:m-[7%] form">
+        <div
+          class="row-span-3 grid grid-rows-5 py-2 gap-2 bg-black rounded-[3vh]"
+        >
+          <input
+            type="text"
+            class="mx-2 pl-4 rounded-[2vh] bg-white font-semibold text-xl placeholder-black"
+            placeholder="Username"
+          />
+          <input
+            type="email"
+            class="mx-2 pl-4 rounded-[2vh] bg-white font-semibold text-xl placeholder-black"
+            placeholder="Email"
+          />
+          <input
+            type="password"
+            class="mx-2 pl-4 rounded-[2vh] bg-white font-semibold text-xl placeholder-black"
+            placeholder="Password"
+          />
+          <input
+            type="password"
+            class="mx-2 pl-4 rounded-[2vh] bg-white font-semibold text-xl placeholder-black"
+            placeholder="Confirm Password"
+          />
+          <input
+            type="submit"
+            class="mx-2 pl-4 rounded-[2vh] flex bg-yellow-400 font-semibold text-2xl placeholder-black"
+            placeholder="Sign up"
+          />
+        </div>
+        <div class="row-span-2 grid grid-rows-3">
+          <div
+            class="or text-xl font-bold p-4 flex items-center justify-center"
+          >
+            OR
+          </div>
+          <div
+            class="google grid grid-cols-7 bg-black rounded-[3vh] flex items-center"
+          >
+            <div
+              class="bg-white rounded-[2vh] col-span-1 m-2 h-12 lg:h-14 aspect-square flex items-center justify-center"
+            >
+              <img
+                src="https://www.transparentpng.com/thumb/google-logo/colorful-google-logo-transparent-clipart-download-u3DWLj.png"
+                alt="Google"
+                class="p-1"
+              />
+            </div>
+            <div class="text-xl lg:text-2xl flex items-center text-white col-span-5 lg:col-span-6 text-left font-bold m-1">
+              Sign up with Google
+            </div>
+          </div>
+          <div class="last-row grid grid-cols-2 text-base lg:text-xl">
+            <div class="remember-me font-bold flex items-end justify-start">
+              <form action="">
+               <label for="checkbox">Remember Me </label> <input type="checkbox" id="checkbox" class="m-2 rounded-[2vh] checkbox" />
+              </form>
+            </div>
+            <div class="font-bold flex items-end justify-end">Forgot Password?</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

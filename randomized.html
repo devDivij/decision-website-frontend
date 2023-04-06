@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <title>Randomized</title>
+    <style>
+      body {
+        background: url("https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80");
+        background-size: cover;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        font-family: "Plus Jakarta Sans";
+      }
+
+      .container-box {
+        background-color: black;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body class="flex justify-center items-center h-screen">
+    <div
+      class="container-box w-full h-full lg:w-[98vw] lg:h-[96vh] grid grid-rows-5 lg:rounded-[4vh]"
+    >
+      <div class="row-span-1 flex justify-center items-center text-white text-sm lg:text-2xl">
+        You can go ahead with choosing
+      </div>
+      <div class="row-span-3 text-[8rem] md:text-[13rem] flex justify-center text-white">Salad</div>
+      <div class="grid grid-cols-2 row-span-1">
+        <div class="bg-white m-[6px] mr-0 rounded-[2vh] text-base md:text-4xl flex justify-center font-extrabold items-center lg:rounded-[3vh]">Randomize again</div>
+        <div class="bg-neutral-800 m-[6px] rounded-[2vh] text-white text-base md:text-4xl flex justify-center font-extrabold items-center lg:rounded-[3vh]">Take another decision</div>
+      </div>
+    </div>
+  </body>
+</html>
