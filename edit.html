@@ -10,11 +10,11 @@
       rel="stylesheet"
     />
     <style>
-      .column-box{
+      .column-box, .buttons-navbar {
         z-index: 4;
         position: relative;
       }
-      .container-box{
+      .container-box {
         position: relative;
         overflow: hidden;
       }
@@ -46,7 +46,7 @@
         border: 1px solid rgba(255, 255, 255, 0.18);
         box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
       }
-      body{
+      body {
         backdrop-filter: blur(40px);
       }
     </style>
@@ -56,68 +56,48 @@
       class="container-box w-full h-full lg:w-[98vw] lg:h-[96vh] grid grid-cols-1 grid-rows-5 lg:grid-rows-3 lg:grid-cols-3 lg:rounded-[4vh]"
     >
       <div
-        class="grid grid-rows-6 lg:grid-rows-none text-7xl lg:text-6xl font-black text-white column-box rounded-[2vh] lg:rounded-[3vh] row-span-2 lg:row-span-3"
+        class="flex justify-center lg:justify-start items-center text-6xl font-black text-white column-box rounded-[2vh] lg:rounded-[3vh] row-span-2 lg:row-span-3 border-white border-4"
       >
         <div
-          class="column-text flex lg:row-span-full leading-snug row-span-5 lg:text-left text-center px-[10%] items-center"
+          class="column-text flex leading-snug lg:text-left text-center px-[10%] items-center"
           contenteditable
         >
           What should I eat, drink and do today?
         </div>
-        <div class="lg:hidden flex items-end justify-between buttons-column-1">
+        <div
+          class="flex flex-row z-10 absolute place-self-end bottom-0 right-0 m-4 gap-4"
+        >
           <div
-            class="save-decision flex items-center justify-center bg-neutral-800"
+            class="bg-neutral-800 flex justify-center items-center text-white rounded-[2vh] h-[8vh] aspect-square cancel-button"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              fill="none"
               viewBox="0 0 24 24"
-              stroke-width="2"
-              stroke="currentColor"
-              class="w-10 h-10"
-            >
+              fill="currentColor"
+              class="w-[50%] max-w-[5vw] stroke-1 stroke-white"
+            > 
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z"
+                fill-rule="evenodd"
+                d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z"
+                clip-rule="evenodd"
               />
             </svg>
           </div>
-          <div class="flex">
-            <div class="menu flex items-center justify-center bg-neutral-800">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke="currentColor"
-                class="w-11 h-11"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M3.75 9h16.5m-16.5 6.75h16.5"
-                />
-              </svg>
-            </div>
-            <div
-              class="new-decision flex items-center justify-center bg-neutral-800"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke="white"
-                class="w-14 h-14"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M12 6v12m6-6H6"
-                />
-              </svg>
-            </div>
+          <div
+            class="bg-neutral-800 flex justify-center items-center text-white rounded-[2vh] h-[8vh] aspect-square save-button"
+          >
+          <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          class="w-[50%] max-w-[5vw] stroke-1 stroke-white"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z"
+            clip-rule="evenodd"
+          />
+        </svg>
           </div>
         </div>
       </div>
@@ -152,12 +132,70 @@
         class="hidden lg:grid grid-cols-2 row-span-1 lg:pb-[3.5%] lg:pl-[4.5%] items-end bg-blue-600 text-2xl font-extrabold text-white another-decision buttons"
       ></div>
 
-      <div
-        class="p-0 lg:pb-[3.5%] lg:pl-[4.5%] lg:grid lg:grid-cols-2 flex items-center rounded-[2vh] lg:rounded-[3vh] m-[6px] lg:ml-0 justify-center lg:items-end bg-indigo-800 row-span-1 lg:col-span-2 text-6xl lg:text-5xl font-extrabold text-white buttons"
-      >
-        <div class="flex text-center justify-center"></div>
+      <div class="grid grid-rows-5 lg:grid-rows-none lg:col-span-2">
+        <div
+          class="p-0 lg:pb-[3.5%] lg:pl-[4.5%] flex items-center rounded-[2vh] lg:rounded-[3vh] m-[6px] lg:ml-0 justify-center lg:items-end bg-indigo-800 row-span-3 lg:row-span-1 text-5xl font-extrabold text-white buttons"
+        >
+          <div class="flex-1 text-center lg:text-left"></div>
+        </div>
+        <div
+          class="lg:hidden flex place-items-stretch buttons-navbar row-span-2"
+        >
+          <div
+            class="save-decision flex flex-1 items-center justify-center bg-neutral-800"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="white"
+              class="w-[11%]"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z"
+              />
+            </svg>
+          </div>
+          <div
+            class="profile flex flex-1 items-center justify-center bg-neutral-800"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="white"
+              class="w-[14%]"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
+          <div
+            class="new-decision flex flex-1 items-center justify-center bg-neutral-800"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="white"
+              class="w-[15%]"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 6v12m6-6H6"
+              />
+            </svg>
+          </div>
+        </div>
       </div>
-    <div class="glass"></div>
+      <div class="glass"></div>
     </div>
   </body>
 </html>
