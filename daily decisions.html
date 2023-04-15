@@ -14,13 +14,6 @@
       rel="stylesheet"
     />
     <style>
-      body {
-        background: url("https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80");
-        background-size: cover;
-        overflow: hidden;
-        background-repeat: no-repeat;
-        font-family: "Plus Jakarta Sans";
-      }
       .column {
         border-radius: 3vh;
       }
@@ -44,19 +37,19 @@
         background: url("https://images.unsplash.com/photo-1532680678473-a16f2cda8e43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
       }
 
-      .daily-decisions {
+      .daily-decision {
         margin: 6px;
       }
     </style>
   </head>
   <body class="flex justify-center items-center h-screen">
     <div
-      class="container-box w-full h-full lg:w-[98vw] lg:h-[96vh] lg:rounded-[4vh] p-[6px]"
+      class="container-box w-full h-full p-[1vh]"
     >
-      <div class="flex w-full h-full">
-        <div class="lg:hidden w-full flex flex-col bg-neutral-900 column">
+      <div class="lg:hidden flex w-full h-full">
+        <div class="w-full flex flex-col bg-neutral-900 column">
           <div
-            class="flex text-3xl sm:text-4xl leading-snug items-center font-black text-white pl-[7%] mt-[8%] mb-[6%] daily-decisions-header"
+            class="flex text-3xl sm:text-4xl leading-snug items-center font-bold text-white pl-[7%] mt-[8%] mb-[6%] daily-decisions-header"
           >
             <p class="flex-1">Daily Decisions</p>
             <svg
@@ -70,9 +63,9 @@
               />
             </svg>
           </div>
-          <div class="flex-1 grid grid-rows-6 row-span-4 daily-decisions">
+          <div class="flex-1 grid grid-rows-6 row-span-4 daily-decision">
             <div
-              class="daily first flex items-center text-xl sm:text-2xl font-extrabold text-white bg-red-500"
+              class="daily first flex items-center text-xl sm:text-2xl font-semibold text-white"
             >
               <div class="flex-1">What should I eat today?</div>
               <svg
@@ -89,7 +82,7 @@
               </svg>
             </div>
             <div
-              class="daily second flex items-center text-xl sm:text-2xl font-extrabold text-white bg-indigo-500"
+              class="daily second flex items-center text-xl sm:text-2xl font-semibold text-white"
             >
               <div class="flex-1">What should I drink today?</div>
               <svg
@@ -106,7 +99,7 @@
               </svg>
             </div>
             <div
-              class="daily third flex items-center text-xl sm:text-2xl font-extrabold text-white bg-orange-500"
+              class="daily third flex items-center text-xl sm:text-2xl font-semibold text-white"
             >
               <div class="flex-1">What should I do today?</div>
               <svg
@@ -123,7 +116,7 @@
               </svg>
             </div>
             <div
-              class="daily fourth flex items-center text-xl sm:text-2xl font-extrabold text-white bg-green-500"
+              class="daily fourth flex items-center text-xl sm:text-2xl text-white font-semibold"
             >
               <div class="flex-1">What should I buy today?</div>
               <svg

@@ -15,14 +15,9 @@
     <title>Landing Page</title>
     <style>
       body {
-        background: url("https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80");
-        background-size: cover;
         overflow: hidden;
         background-repeat: no-repeat;
-        font-family: "Plus Jakarta Sans";
-      }
-      .column-1 {
-        margin: 6px;
+        font-family: "Satoshi Variable";
       }
       .container-box {
         background-color: black;
@@ -32,44 +27,38 @@
         border-radius: 3vh;
         margin-bottom: 6px;
         background-repeat: no-repeat;
-        background: url("https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80");
+        background: url("https://images.unsplash.com/photo-1637952112301-6090dca83ccb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
         background-size: cover;
         background-position: center center;
         position: relative;
       }
-      .tagline-container::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.6);
-      }
-      .tagline {
+      .tagline, .decision-button,.column-2 {
         position: relative;
         z-index: 1;
       }
       .decision-button {
-        border-radius: 3vh;
+        border-radius: 4vh;
+        background-color: rgb(255, 196, 237);
+        border: 4px solid rgb(255, 196, 237);
+        color: rgb(21, 0, 35);
       }
       .column-2 {
-        max-width: 24.1vw;
-        border-radius: 3vh;
-        margin-top: 6px;
-        margin-bottom: 6px;
-        margin-right: 6px;
+        border-radius: 4vh;
+        background-color: rgb(33, 31, 34);
       }
       .daily-decisions-header {
-        padding-left: 7%;
-        padding-top: 4%;
+        padding: 3.5vh;
+        color: rgb(255, 196, 237);
+      }
+      .sub-tagline{
+        color: rgb(255, 196, 237);
       }
       .daily {
-        padding-left: 8%;
-        margin-bottom: 10px;
+        padding-left: 11%;
         border-radius: 3vh;
         background-size: cover;
         background-position: center center;
+        color: white;
       }
       .first {
         background: url("https://images.unsplash.com/photo-1504672281656-e4981d70414b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
@@ -83,117 +72,112 @@
       .fourth {
         background: url("https://images.unsplash.com/photo-1532680678473-a16f2cda8e43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
       }
-
-      .daily-decisions {
-        margin: 6px;
-        margin-top: 10px;
-      }
     </style>
   </head>
   <body class="flex justify-center items-center h-screen">
-    <div
-      class="container-box grid lg:grid-cols-4 w-full h-full lg:rounded-[4vh] lg:w-[98vw] lg:h-[96vh]"
-    >
-      <div class="grid grid-rows-6 lg:col-span-3 column-1">
-        <div
-          class="flex items-center justify-center text-4xl md:text-5xl font-black text-white leading-snug tagline-container bg-black col-span-2 row-span-5"
-        >
-          <div class="tagline text-center m-3">
-            Surrender to the Universe
+    <div class="container-box w-full h-full p-[1vh]">
+      <div class="grid lg:grid-cols-4 w-full h-full gap-[1vh]">
+        <div class="grid grid-rows-6 lg:col-span-3 column-1 gap-[1vh]">
+          <div
+            class="flex items-center justify-center text-4xl text-white md:text-5xl font-bold leading-snug tagline-container col-span-2 row-span-5"
+          >
+            <div class="tagline text-center m-3">
+              Surrender to the Universe
+              <div
+                class="sub-tagline text-medium text-center text-base md:text-2xl m-1 md:m-3"
+              >
+                Randomize Your Choices for Ultimate Clarity
+              </div>
+            </div>
+          </div>
+          <div class="flex col-span-2">
             <div
-              class="sub-tagline text-center text-base md:text-2xl m-1 md:m-3"
+              class="flex lg:basis-full basis-3/4 items-center justify-center w-full text-xl md:text-3xl font-medium decision-button"
             >
-              Randomize Your Choices for Ultimate Clarity
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                class="w-8 h-8 md:w-12 md:h-12"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 6v12m6-6H6"
+                />
+              </svg>
+              Take a new decision
+            </div>
+
+            <div
+              class="flex lg:hidden basis-1/4 items-center justify-center w-[15vw] lg:hidden overflow-hidden rounded-[4vh] text-white ml-[6px]"
+            >
+              <div class="shrink-0 flex items-center justify-center p-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="w-8 h-8"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M4.125 3C3.089 3 2.25 3.84 2.25 4.875V18a3 3 0 003 3h15a3 3 0 01-3-3V4.875C17.25 3.839 16.41 3 15.375 3H4.125zM12 9.75a.75.75 0 000 1.5h1.5a.75.75 0 000-1.5H12zm-.75-2.25a.75.75 0 01.75-.75h1.5a.75.75 0 010 1.5H12a.75.75 0 01-.75-.75zM6 12.75a.75.75 0 000 1.5h7.5a.75.75 0 000-1.5H6zm-.75 3.75a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5H6a.75.75 0 01-.75-.75zM6 6.75a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h3a.75.75 0 00.75-.75v-3A.75.75 0 009 6.75H6z"
+                    clip-rule="evenodd"
+                  />
+                  <path
+                    d="M18.75 6.75h1.875c.621 0 1.125.504 1.125 1.125V18a1.5 1.5 0 01-3 0V6.75z"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
         </div>
-        <div class="flex col-span-2">
+        <div class="hidden lg:grid grid-rows-10 w-full column-2 p-[1.5vh]">
           <div
-            class="flex lg:basis-full basis-3/4 items-center justify-center w-full bg-slate-200 text-xl md:text-3xl font-black text-black decision-button"
+            class="flex text-xl leading-snug lg:text-3xl items-center font-bold daily-decisions-header"
           >
+            <p>Daily Decisions</p>
+          </div>
+          <div class="grid grid-rows-6 row-span-6 daily-decisions gap-[0.9vh]">
+            <div
+              class="daily first flex items-center text-xl font-semibold"
+            >
+              What should I eat today?
+            </div>
+            <div
+              class="daily second flex items-center text-xl font-semibold"
+            >
+              What should I drink today?
+            </div>
+            <div
+              class="daily third flex items-center text-xl font-semibold"
+            >
+              What should I do today?
+            </div>
+            <div
+              class="daily fourth flex items-center text-xl font-semibold"
+            >
+              What should I buy today?
+            </div>
+          </div>
+          <div class="flex justify-center items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               stroke-width="2"
-              stroke="black"
-              class="w-8 h-8 md:w-12 md:h-12"
+              stroke="rgb(255, 196, 237)"
+              class="w-8 h-8"
             >
               <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                d="M12 6v12m6-6H6"
+                d="M19.5 8.25l-7.5 7.5-7.5-7.5"
               />
             </svg>
-            Take a new decision
           </div>
-
-          <div
-            class="flex lg:hidden basis-1/4 items-center justify-center w-[15vw] lg:hidden overflow-hidden rounded-[3vh] bg-amber-500 text-white ml-[6px]"
-          >
-            <div class="shrink-0 flex items-center justify-center p-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                class="w-8 h-8"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M4.125 3C3.089 3 2.25 3.84 2.25 4.875V18a3 3 0 003 3h15a3 3 0 01-3-3V4.875C17.25 3.839 16.41 3 15.375 3H4.125zM12 9.75a.75.75 0 000 1.5h1.5a.75.75 0 000-1.5H12zm-.75-2.25a.75.75 0 01.75-.75h1.5a.75.75 0 010 1.5H12a.75.75 0 01-.75-.75zM6 12.75a.75.75 0 000 1.5h7.5a.75.75 0 000-1.5H6zm-.75 3.75a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5H6a.75.75 0 01-.75-.75zM6 6.75a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h3a.75.75 0 00.75-.75v-3A.75.75 0 009 6.75H6z"
-                  clip-rule="evenodd"
-                />
-                <path
-                  d="M18.75 6.75h1.875c.621 0 1.125.504 1.125 1.125V18a1.5 1.5 0 01-3 0V6.75z"
-                />
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="hidden lg:grid grid-rows-10 w-full bg-neutral-900 column-2">
-        <div
-          class="flex text-xl leading-snug lg:text-[2.45rem] items-center font-black text-white daily-decisions-header"
-        >
-          <p>Daily Decisions</p>
-        </div>
-        <div class="grid grid-rows-5 row-span-6 daily-decisions">
-          <div
-            class="daily first flex items-center text-2xl font-extrabold text-white bg-red-500"
-          >
-            What should I eat today?
-          </div>
-          <div
-            class="daily second flex items-center text-2xl font-extrabold text-white bg-indigo-500"
-          >
-            What should I drink today?
-          </div>
-          <div
-            class="daily third flex items-center text-2xl font-extrabold text-white bg-orange-500"
-          >
-            What should I do today?
-          </div>
-          <div
-            class="daily fourth flex items-center text-2xl font-extrabold text-white bg-green-500"
-          >
-            What should I buy today?
-          </div>
-        </div>
-        <div class="flex justify-center items-center">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="2"
-            stroke="white"
-            class="w-8 h-8"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-            />
-          </svg>
         </div>
       </div>
     </div>

@@ -1,10 +1,7 @@
 /* Set the background image with a placeholder */
 body {
-  background: url("https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80");
-  background-size: cover;
   overflow: hidden;
-  background-repeat: no-repeat;
-  font-family: "Plus Jakarta Sans";
+  font-family: "Satoshi Variable";
 }
 
 .container-box {
@@ -13,7 +10,7 @@ body {
 }
 
 .column-box {
-  background-image: url("https://images.unsplash.com/photo-1656536665219-da2b7deb314b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80");
+  background-image: url("https://images.unsplash.com/photo-1628418064700-f65f874f0fb8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=410&q=80");
   background-size: cover;
   overflow: hidden;
   background-repeat: no-repeat;
@@ -42,11 +39,26 @@ body {
     display: block;
   }
 }
+.daily-decisions, .another-decision{
+  background-color: rgb(103, 61, 5);
+}
 
-.arrow {
+.choose-option{
+  background-color: rgb(195, 86, 9);
+}
+.edit-button, .settings-button{
+  background-color: rgb(48, 31, 17);
+  color: rgb(255, 227, 203);
+}
+.svg {
   text-align: end;
-  padding-top: 3%;
-  padding-right: 3%;
+  margin-top: 2vw;
+  margin-right: 2vw;
+  width: 2vw;
+}
+.option{
+  background-color: rgb(48, 31, 17);
+  color: rgb(255, 227, 203);
 }
 
 .navbar {
@@ -64,9 +76,6 @@ body {
   width: 35px;
   margin-right: 10px;
   border-radius: 3vh;
-}
-.buttons-navbar {
-  margin: 8px;
 }
 
 .new-decision,
