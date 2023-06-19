@@ -1,16 +1,49 @@
 /* Set the background image with a placeholder */
 body {
-  overflow: hidden;
-  font-family: "Satoshi Variable";
+  background-color: black;
+}
+* {
+  font-family: "Plus Jakarta Sans";
+}
+::-webkit-scrollbar {
+  width: 0.1vw;
+}
+@media (max-width: 767px) {
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(39, 39, 39);
+  border-radius: 50px;
+}
+.nav-button {
+  background-color: rgb(49, 49, 49);
 }
 
+::selection {
+  background-color: #2cff92;
+  color: #05160e;
+}
+
+.decision {
+  background: url("https://images.unsplash.com/photo-1685777160346-6d1da0d6b428?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80");
+  color: #d8f1ff;
+  background-size: cover;
+  background-position: center;
+}
+.decision:hover > .on-hover-line {
+  opacity: 100%;
+  transition: opacity 0.1s ease-in;
+}
 .container-box {
   background-color: black;
   overflow: hidden;
 }
 
 .column-box {
-  background-image: url("https://images.unsplash.com/photo-1628418064700-f65f874f0fb8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=410&q=80");
+  background-image: url("https://images.unsplash.com/photo-1575141251061-c8259641ed63?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80");
+  background-position: center center;
   background-size: cover;
   overflow: hidden;
   background-repeat: no-repeat;
@@ -39,26 +72,25 @@ body {
     display: block;
   }
 }
-.daily-decisions, .another-decision{
-  background-color: rgb(103, 61, 5);
+.daily-decisions,
+.another-decision {
+  background-color: #165452;
 }
 
-.choose-option{
-  background-color: rgb(195, 86, 9);
+.choose-option {
+  background-color: #853939;
 }
-.edit-button, .settings-button{
-  background-color: rgb(48, 31, 17);
-  color: rgb(255, 227, 203);
+.edit-button,
+.settings-button,
+.option {
+  background-color: #05160e;
+  color: #c7ffe2;
 }
 .svg {
   text-align: end;
   margin-top: 2vw;
   margin-right: 2vw;
   width: 2vw;
-}
-.option{
-  background-color: rgb(48, 31, 17);
-  color: rgb(255, 227, 203);
 }
 
 .navbar {
