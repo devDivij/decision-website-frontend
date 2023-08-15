@@ -64,14 +64,6 @@ body {
   background: rgba(0, 0, 0, 0.3);
 }
 
-@media (min-width: 1024px) {
-  .delete {
-    display: none;
-  }
-  .option:hover .delete {
-    display: block;
-  }
-}
 .daily-decisions,
 .another-decision {
   background-color: #165452;
@@ -86,13 +78,6 @@ body {
   background-color: #05160e;
   color: #c7ffe2;
 }
-.svg {
-  text-align: end;
-  margin-top: 2vw;
-  margin-right: 2vw;
-  width: 2vw;
-}
-
 .navbar {
   border-radius: 3vh;
   border-width: 2px;
